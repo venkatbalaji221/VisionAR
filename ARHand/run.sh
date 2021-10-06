@@ -1,0 +1,1 @@
+python ar.py --teximage1 ./textures/monkey.png --teximage2 ./textures/crate.png
