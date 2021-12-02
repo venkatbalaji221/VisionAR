@@ -28,7 +28,7 @@ def createFolder(directory):
 
 
 def main():
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(4)
     if cap.isOpened() is False:
         print("Error: Opening the camera")
         exit(-1)

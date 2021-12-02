@@ -149,8 +149,9 @@ def main():
             cv2.putText(image, fps, (7, 70), font, 3,
                         (100, 255, 0), 3, cv2.LINE_AA)
             out.write(image)  # writing into video file
-            image = cv2.resize(image, (0, 0), fx=3, fy=3)
+            # image = cv2.resize(image, (0, 0), fx=2, fy=2)
             cv2.imshow("HandCube", image)
+            cv2.imwrite("augment.png", image)
             if cv2.waitKey(5) & 0xFF == 27:  # checking if esc key is pressed
                 break
 

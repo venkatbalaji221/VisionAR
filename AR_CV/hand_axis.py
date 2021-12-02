@@ -67,7 +67,7 @@ def main():
                     mp_drawing.draw_landmarks(
                         image, hand_landmarks, mp_hands.HAND_CONNECTIONS, mp_drawing.DrawingSpec(color=BLACK), mp_drawing.DrawingSpec(color=WHITE) )
 
-                if not hand_landmarks.landmark[2].x < hand_landmarks.landmark[17].x: # LeftHandedness
+                if not hand_landmarks.landmark[2].x < hand_landmarks.landmark[17].x:  # LeftHandedness
                     imgp = np.zeros((6, 2), dtype=np.float32)
                     k = 0
                     for i in [0, 1, 5, 9, 13, 17]:
@@ -105,6 +105,8 @@ def main():
             out.write(image)  # writing into video file
             image = cv2.resize(image, (0, 0), fx=2, fy=2)
             cv2.imshow("HandAxis", image)
+            cv2.imwrite("augment.png", image)
+
             if cv2.waitKey(5) & 0xFF == 27: # checking if esc key is pressed
                 break
     cap.release()

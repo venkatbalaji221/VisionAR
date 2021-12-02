@@ -73,7 +73,7 @@ ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(
     objpoints, imgpoints, gray.shape[::-1], None, None)
 
 # Save the calibration parameters into a .npz file
-np.savez("../simple/data/CalibData.npz", mtx=mtx, dist=dist, rvecs=rvecs, tvecs=tvecs)
+np.savez("../AR_GL/data/CalibDataWebCam.npz", mtx=mtx, dist=dist, rvecs=rvecs, tvecs=tvecs)
 
 # Reprojection Error
 mean_error = 0
