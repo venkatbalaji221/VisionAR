@@ -33,7 +33,7 @@ def getImgp(i, hand_landmarks, img_wd, img_ht):
 
 
 def get_projection(camMatrix, n, f):
-    print(camMatrix)
+    # print(camMatrix)
     fx = np.float32(camMatrix[0][0])
     fy = np.float32(camMatrix[1][1])
     cx = np.float32(camMatrix[0][2])
@@ -54,11 +54,11 @@ def get_view(em):
     #                      [-em[1][0], -em[1][1], -em[1][2], -em[1][3]],
     #                      [-em[2][0], -em[2][1], -em[2][2], -em[2][3]],
     #                      [0, 0, 0, 1]])
-    mvmatrix = np.array([[em[0][0], em[0][1], em[0][2], 0],
-                         [em[1][0], em[1][1], em[1][2], 0],
-                         [em[2][0], em[2][1], em[2][2], -3],
-                         [0, 0, 0, 1]])
+    # mvmatrix = np.array([[em[0][0], em[0][1], em[0][2], 0],
+    #                      [em[1][0], em[1][1], em[1][2], 0],
+    #                      [em[2][0], em[2][1], em[2][2], -3],
+    #                      [0, 0, 0, 1]])
     view = np.array([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, -3], [0, 0, 0, 1]])
-    return np.transpose(mvmatrix)
+    return np.transpose(view)
 
 

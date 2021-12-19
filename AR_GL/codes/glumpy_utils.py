@@ -48,3 +48,8 @@ class Cube:
         self.I = self.I.view(gloo.IndexBuffer)
         self.cube = gloo.Program(vertex, fragment)
         self.cube.bind(self.V)
+
+
+ # Cube object initialisation in main code
+ #    cubeObj = Cube(vertex, fragment)
+
